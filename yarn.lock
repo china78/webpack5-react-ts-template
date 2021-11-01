@@ -1033,7 +1033,7 @@
     "@types/eslint" "*"
     "@types/estree" "*"
 
-"@types/eslint@*":
+"@types/eslint@*", "@types/eslint@^7.28.2":
   version "7.28.2"
   resolved "https://registry.npmmirror.com/@types/eslint/download/@types/eslint-7.28.2.tgz?cache=0&sync_timestamp=1635092369821&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Feslint%2Fdownload%2F%40types%2Feslint-7.28.2.tgz#0ff2947cdd305897c52d5372294e8c76f351db68"
   integrity sha1-D/KUfN0wWJfFLVNyKU6MdvNR22g=
@@ -2488,6 +2488,17 @@ eslint-visitor-keys@^3.0.0:
   resolved "https://registry.nlark.com/eslint-visitor-keys/download/eslint-visitor-keys-3.0.0.tgz#e32e99c6cdc2eb063f204eda5db67bfe58bb4186"
   integrity sha1-4y6Zxs3C6wY/IE7aXbZ7/li7QYY=
 
+eslint-webpack-plugin@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmmirror.com/eslint-webpack-plugin/download/eslint-webpack-plugin-3.1.0.tgz#86ee426f076e2d82f9d9eaab12db1de4311c35b2"
+  integrity sha1-hu5CbwduLYL52eqrEtsd5DEcNbI=
+  dependencies:
+    "@types/eslint" "^7.28.2"
+    jest-worker "^27.3.1"
+    micromatch "^4.0.4"
+    normalize-path "^3.0.0"
+    schema-utils "^3.1.1"
+
 eslint@^8.1.0:
   version "8.1.0"
   resolved "https://registry.npmmirror.com/eslint/download/eslint-8.1.0.tgz#00f1f7dbf4134f26588e6c9f2efe970760f64664"
@@ -3445,7 +3456,7 @@ isobject@^3.0.1:
   resolved "https://registry.npm.taobao.org/isobject/download/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-jest-worker@^27.0.6:
+jest-worker@^27.0.6, jest-worker@^27.3.1:
   version "27.3.1"
   resolved "https://registry.npmmirror.com/jest-worker/download/jest-worker-27.3.1.tgz?cache=0&sync_timestamp=1634626670802&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fjest-worker%2Fdownload%2Fjest-worker-27.3.1.tgz#0def7feae5b8042be38479799aeb7b5facac24b2"
   integrity sha1-De9/6uW4BCvjhHl5mut7X6ysJLI=

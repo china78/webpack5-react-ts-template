@@ -20,7 +20,10 @@ module.exports = {
     alias: {
       '@src': path.resolve(__dirname, '../src'),
       '@packages': path.resolve(__dirname, '../src/packages'),
-      '@containers': path.resolve(__dirname, '../src/containers')
+      '@containers': path.resolve(__dirname, '../src/containers'),
+      '@layout': path.resolve(__dirname, '../src/layout'),
+      '@utils': path.resolve(__dirname, '../src/utils'),
+      '@styles': path.resolve(__dirname, '../src/styles'),
     },
     mainFiles: ['index', 'main'],
     extensions: ['.ts', '.tsx', '.scss', '.json', '.js']
@@ -30,6 +33,21 @@ module.exports = {
       {
         test: /\.(t|j)sx?$/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.css/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          'postcss-loader',
+        ],
       },
       {
         test: /\.(sa|sc|le)ss$/,
@@ -60,8 +78,17 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe?g|svg|gif)$/,
+        test: /\.(png|jpe?g|gif)$/,
         type: 'asset/inline'
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 4 * 1024, // 4kb
+          },
+        },
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
