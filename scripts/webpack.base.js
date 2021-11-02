@@ -44,6 +44,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
+              modules: true
             },
           },
           'postcss-loader',
@@ -55,7 +56,12 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader
           },
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            },
+          },
           'postcss-loader',
           {
             loader: 'resolve-url-loader',
